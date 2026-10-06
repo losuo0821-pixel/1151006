@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>駱素娥 Su-E Luo | AI 應用與流程優化專家</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f3ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- 導覽列 Navigation Bar -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    娥
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900 block leading-none">駱素娥</span>
+                    <span class="text-xs font-medium text-slate-500 tracking-wider uppercase mt-1 block">AI 應用與流程優化顧問</span>
+                </div>
+            </a>
+
+            <!-- 桌機選單 Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-brand-600 transition-colors">關於我</a>
+                <a href="#philosophy" class="hover:text-brand-600 transition-colors">人機協作理念</a>
+                <a href="#solutions" class="hover:text-brand-600 transition-colors">AI 解決方案</a>
+                <a href="#calculator" class="hover:text-brand-600 transition-colors">效益試算</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-slate-900 text-white font-semibold hover:bg-brand-600 shadow-sm transition-all hover:shadow-brand-500/25">
+                    預約洽談
+                </a>
+            </nav>
+
+            <!-- 行動版漢堡按鈕 Mobile Hamburger Button -->
+            <button id="menuBtn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- 行動版下拉選單 Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">關於我</a>
+            <a href="#philosophy" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">人機協作理念</a>
+            <a href="#solutions" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">AI 解決方案</a>
+            <a href="#calculator" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">效益試算</a>
+            <a href="#contact" class="block px-3 py-2.5 rounded-lg text-center font-semibold bg-brand-600 text-white shadow-sm">預約洽談</a>
+        </div>
+    </header>
+
+    <!-- Hero 英雄主視覺區塊 -->
+    <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden bg-gradient-to-b from-indigo-50/60 via-slate-50 to-slate-50">
+        <!-- 背景飾點 -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-tr from-indigo-200/40 to-purple-200/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs sm:text-sm font-semibold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                        企業教育訓練｜數位工具導入｜流程降本增效
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.2]">
+                        讓 AI 不只是工具<br>
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600">
+                            更是團隊值得信賴的夥伴
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        許多企業不缺最新 AI，而是不知道「如何真正用在工作現場」。我協助企業與團隊重塑工作流程，將複雜科技轉化為<strong class="text-slate-800 font-semibold">學得會、做得到、用得上</strong>的實務能力。
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 text-white font-semibold text-base shadow-lg shadow-slate-900/10 hover:bg-brand-600 hover:shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <span>洽談企業內訓與顧問</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#solutions" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-slate-700 font-semibold text-base border border-slate-200 hover:bg-slate-50 transition-all text-center shadow-sm">
+                            探索 AI 解決方案
+                        </a>
+                    </div>
+
+                    <!-- 亮點數據小欄位 -->
+                    <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-slate-900">100%</div>
+                            <div class="text-xs sm:text-sm text-slate-500 mt-1">實戰工作場景對接</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-slate-900">人機協作</div>
+                            <div class="text-xs sm:text-sm text-slate-500 mt-1">極致發揮團隊核心價值</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-slate-900">降本增效</div>
+                            <div class="text-xs sm:text-sm text-slate-500 mt-1">減少大量重複性人工作業</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 形象卡片區 -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- 裝飾外框 -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-brand-500 to-purple-500 rounded-3xl blur opacity-20"></div>
+                        
+                        <div class="relative bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8 space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white font-bold text-2xl shadow-md">
+                                    駱
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900">駱素娥 Su-E Luo</h3>
+                                    <p class="text-sm text-brand-600 font-medium">AI 實務應用與流程改善專家</p>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-600 text-sm leading-relaxed italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                「科技真正的價值，不在於工具有多複雜，而在於能否解決真實的工作問題，讓人工作得更有效率，也讓企業的流程變得更簡單、更精準。」
+                            </p>
+
+                            <div class="space-y-3 pt-2">
+                                <div class="flex items-center gap-3 text-sm text-slate-700">
+                                    <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                                    <span>專注實務場景，拒絕純理論教學</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-slate-700">
+                                    <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                                    <span>精準診斷流程痛點，打造自動化機制</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-slate-700">
+                                    <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                                    <span>協助跨職務團隊順暢人機協作轉型</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我 About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">ABOUT ME</h2>
+                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">關於我與我的專業使命</p>
+                <div class="w-12 h-1 bg-brand-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-slate-600 leading-relaxed text-base sm:text-lg">
+                    <p class="font-medium text-slate-900">
+                        我是駱素娥，專注於 AI 應用、數位工具導入、企業教育訓練與工作流程改善。
+                    </p>
+                    <p>
+                        在數位轉型與 AI 快速發展的時代，許多企業其實並不是缺少工具，而是不知道「從哪裡開始、如何導入，以及如何真正用在工作現場」。
+                    </p>
+                    <p>
+                        因此，我始終以實際工作情境為出發點，深度觀察企業在資料整理、文件處理、行政作業、資訊彙整與第一線工作流程中的痛點，進一步思考如何運用 AI 與數位工具，減少重複性工作、降低人工負擔，並提升整體工作效率。
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-200 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">解決真實痛點</h4>
+                        <p class="text-sm text-slate-600">深入企業第一線行政與作業現場，找出現有流程卡關與冗餘環節。</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-200 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">連結科技與需求</h4>
+                        <p class="text-sm text-slate-600">不只教工具操作，更注重技術如何服貼回應同仁日常作業的實際需求。</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-200 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">學得會·做得到</h4>
+                        <p class="text-sm text-slate-600">將複雜 AI 技術化繁為簡，讓不同職務與背景的學習者都能上手即用。</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-200 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">賦能個人價值</h4>
+                        <p class="text-sm text-slate-600">從「會使用工具」走向「用科技創造更好工作方式」，放大專業創造力。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 人機協作理念 Core Philosophy Section -->
+    <section id="philosophy" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-900/40 via-slate-900 to-slate-900"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="px-3.5 py-1.5 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-widest border border-indigo-500/30">HUMAN-AI COLLABORATION</span>
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mt-4">專業特色：重構「人與 AI」的分工機制</h2>
+                <p class="text-slate-400 mt-4 text-lg">AI 的價值不在於取代人，而在於賦能每一個人。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- AI 的角色 -->
+                <div class="bg-slate-800/80 border border-slate-700/80 p-8 rounded-2xl backdrop-blur">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">AI 負責的工作</h3>
+                            <p class="text-xs text-indigo-300">極致的高效處理與輔助</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-indigo-400 mt-1"></i>
+                            <span>海量資料與文件內容整理彙整</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-indigo-400 mt-1"></i>
+                            <span>高重複性行政流程自動化執行</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-indigo-400 mt-1"></i>
+                            <span>初稿內容生成、翻譯與資訊抽取</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-indigo-400 mt-1"></i>
+                            <span>多管道資訊分類與速記歸檔</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 人員的核心價值 -->
+                <div class="bg-slate-800/80 border border-slate-700/80 p-8 rounded-2xl backdrop-blur">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">人員保留的核心價值</h3>
+                            <p class="text-xs text-purple-300">關鍵決策與創意的展現</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-star text-purple-400 mt-1"></i>
+                            <span>關鍵商務與營運決策的判斷與覆核</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-star text-purple-400 mt-1"></i>
+                            <span>跨部門溝通、客戶關係經營與同理</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-star text-purple-400 mt-1"></i>
+                            <span>商業策略發想與獨特創意構思</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-star text-purple-400 mt-1"></i>
+                            <span>品質把關、倫理與合規風險掌控</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center max-w-2xl mx-auto bg-brand-900/40 border border-brand-500/30 p-6 rounded-2xl">
+                <p class="text-slate-200 text-sm sm:text-base">
+                    「真正成功的 AI 導入，不是追逐最新工具，而是找到最適合團隊的工作方法。」
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI 解決方案 Solutions Section -->
+    <section id="solutions" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">AI SOLUTIONS</h2>
+                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">讓 AI 成為團隊的實力</p>
+                <p class="mt-3 text-slate-600 text-base">提供以實務應用與工作場景為核心的落地解決方案</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 服務項目 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">企業 AI 教育訓練與實戰工作坊</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            專為非技術背景同仁設計，以真實公務情境案例教學，包含 AI 基礎觀念、Prompt 提問心法與情境模擬。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-blue-500"></i> 客製化企業課程設計</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-blue-500"></i> 上手即用的練習教案</li>
+                    </ul>
+                </div>
+
+                <!-- 服務項目 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">生成式 AI 工具與 Prompt 實務應用</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            協助同仁掌握簡報製作、報告撰寫、數據分析、郵件回覆與行銷文案生成，數倍提升資訊處理效率。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-indigo-500"></i> 提示詞庫模板建置</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-indigo-500"></i> 各類主流 AI 工具調優</li>
+                    </ul>
+                </div>
+
+                <!-- 服務項目 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">工作流程數位化與自動化優化設計</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            梳理既有行政與業務流程，導入 No-Code/Low-Code 數位自動化工具與 AI 節點，打通資料流轉瓶頸。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-500"></i> 痛點診斷與流程繪製</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-500"></i> 自動化工作流建立</li>
+                    </ul>
+                </div>
+
+                <!-- 服務項目 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">人機協作機制建立與降本增效</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            設計符合企業文化與法規安全的人機分工 SOP，定義人工覆核與 AI 賦能的最佳防護與協作節奏。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> 人機協作作業標準規範</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> 團隊效益評估與反饋</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 互動式 AI 效益試算器 ROI Calculator Section -->
+    <section id="calculator" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-brand-900 via-indigo-900 to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                <div class="max-w-3xl">
+                    <span class="text-brand-300 text-xs font-bold uppercase tracking-wider">INTERACTIVE TOOL</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold mt-2">估算您的團隊導入 AI 後的效率提升</h2>
+                    <p class="text-slate-300 text-sm sm:text-base mt-3">拖動下方滑桿，了解人機協作能為您的團隊節省多少重複性人工工時。</p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8 mt-8 items-center">
+                    <div class="lg:col-span-7 space-y-6 bg-white/10 p-6 rounded-2xl backdrop-blur border border-white/10">
+                        <!-- 人數 -->
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-2">
+                                <span>團隊或部門人數</span>
+                                <span id="teamSizeVal" class="text-brand-300 font-bold">10 人</span>
+                            </div>
+                            <input type="range" id="teamSize" min="2" max="100" value="10" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                        </div>
+
+                        <!-- 每週重複性工作時數 -->
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-2">
+                                <span>每人每週處理資料/文件的重複工時</span>
+                                <span id="hoursVal" class="text-brand-300 font-bold">12 小時</span>
+                            </div>
+                            <input type="range" id="hours" min="2" max="30" value="12" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                        </div>
+
+                        <!-- AI 預計優化比例 -->
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-2">
+                                <span>預估 AI 自動化與優化比例</span>
+                                <span id="ratioVal" class="text-brand-300 font-bold">50%</span>
+                            </div>
+                            <input type="range" id="ratio" min="20" max="80" value="50" step="5" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-white text-slate-900 p-6 sm:p-8 rounded-2xl shadow-lg space-y-4 text-center">
+                        <div class="text-xs font-bold tracking-wider text-slate-500 uppercase">預估每月團隊總共省下</div>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-brand-600 my-2" id="savedHoursResult">240 小時</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            省下的工時可用於客戶溝通、決策分析、業務拓展與創新專案！
+                        </p>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-slate-900 text-white rounded-xl font-semibold text-sm hover:bg-brand-600 transition-colors">
+                            預約團隊實務痛點診斷
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡洽談區塊 Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">GET IN TOUCH</h2>
+                        <p class="text-3xl font-extrabold text-slate-900">開啟您的 AI 實務轉型之旅</p>
+                        <p class="text-slate-600 mt-4 leading-relaxed">
+                            不論您是企業負責人、HR 教育訓練主管，或是尋求工作流程優化的團隊，歡迎與我聯繫洽談！
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">服務項目</h4>
+                                <p class="text-xs text-slate-500">企業內訓｜顧問諮詢｜專題講座｜流程優化專案</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">電子郵件</h4>
+                                <p class="text-xs text-slate-500">sue.luo.ai@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">服務範圍</h4>
+                                <p class="text-xs text-slate-500">全台實體講座／工作坊 / 線上遠端諮詢</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 表單 -->
+                <div class="lg:col-span-7">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-md space-y-5">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">線上諮詢與內訓需求預約</h3>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">您的姓名 *</label>
+                                <input type="text" required placeholder="例如：王小明" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">單位 / 企業名稱 *</label>
+                                <input type="text" required placeholder="例如：創新科技股份有限公司" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">聯絡電話</label>
+                                <input type="tel" placeholder="0912-345-678" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">電子郵件 *</label>
+                                <input type="email" required placeholder="service@company.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">感興趣的服務類型 *</label>
+                            <select required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm text-slate-700">
+                                <option value="">請選擇需求項目...</option>
+                                <option value="1">企業 AI 教育訓練 & 實戰工作坊</option>
+                                <option value="2">工作流程數位化與自動化優化</option>
+                                <option value="3">專題講座與公開分享</option>
+                                <option value="4">一對一顧問諮詢</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">需求簡述與現階段痛點</label>
+                            <textarea rows="4" placeholder="請簡述您的團隊規模、目前流程痛點或預計舉辦的培訓時間..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 shadow-md transition-all text-sm">
+                            送出一對一諮詢預約
+                        </button>
+
+                        <div id="formMsg" class="hidden text-center text-sm p-3 rounded-lg bg-emerald-50 text-emerald-700 font-medium">
+                            訊息已成功送出！將會盡快與您聯繫。
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 text-white font-bold flex items-center justify-center text-sm">娥</div>
+                <span class="text-white font-bold">駱素娥 Su-E Luo</span>
+                <span class="text-xs text-slate-500">| AI 應用與工作流程優化專家</span>
+            </div>
+            
+            <p class="text-xs text-slate-500">
+                &copy; <span id="year"></span> 駱素娥. All rights reserved. 讓 AI 成為團隊的實戰力。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 設定年份
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 行動版選單開關
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 點擊連結後自動收合選單
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 效益試算器邏輯
+        const teamSizeInput = document.getElementById('teamSize');
+        const hoursInput = document.getElementById('hours');
+        const ratioInput = document.getElementById('ratio');
+
+        const teamSizeVal = document.getElementById('teamSizeVal');
+        const hoursVal = document.getElementById('hoursVal');
+        const ratioVal = document.getElementById('ratioVal');
+        const savedHoursResult = document.getElementById('savedHoursResult');
+
+        function updateCalculator() {
+            const size = parseInt(teamSizeInput.value);
+            const hrs = parseInt(hoursInput.value);
+            const ratio = parseInt(ratioInput.value);
+
+            teamSizeVal.textContent = size + ' 人';
+            hoursVal.textContent = hrs + ' 小時';
+            ratioVal.textContent = ratio + '%';
+
+            // 週總重複時間 = 人數 * 每人每週小時
+            // 每月時間 (以 4 週計算) = 週總時間 * 4
+            // 省下小時 = 每月時間 * (ratio / 100)
+            const monthlySaved = Math.round((size * hrs * 4) * (ratio / 100));
+            savedHoursResult.textContent = monthlySaved.toLocaleString() + ' 小時';
+        }
+
+        teamSizeInput.addEventListener('input', updateCalculator);
+        hoursInput.addEventListener('input', updateCalculator);
+        ratioInput.addEventListener('input', updateCalculator);
+
+        // 表單送出模擬
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const msg = document.getElementById('formMsg');
+            msg.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
