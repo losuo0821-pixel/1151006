@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#about -->
+<html lang="zh-Hant"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="駱素娥專注於 AI 應用、數位工具、企業教育訓練與工作流程改善，協助企業讓 AI 真正走進工作現場。">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>駱素娥｜讓 AI 真正走進工作現場</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f7f2;
+      --white: #fffefa;
+      --ink: #172c2a;
+      --muted: #61716d;
+      --line: #dfe7e1;
+      --green: #1d6153;
+      --green-dark: #174b42;
+      --mint: #dceee7;
+      --lime: #d8ee9b;
+      --orange: #e7a46d;
+      --lavender: #e9e7f5;
+      --shadow: 0 24px 70px rgba(21, 54, 47, .10);
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(247, 247, 242, .88);
+      border-bottom: 1px solid rgba(23, 44, 42, .08);
+      backdrop-filter: blur(16px);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .04em; }
+    .brand-mark {
+      display: grid; place-items: center; width: 42px; height: 42px; border-radius: 15px;
+      background: var(--green); color: white; font-size: 19px;
+      box-shadow: 0 7px 18px rgba(29, 97, 83, .20);
+    }
+    .brand-name { display: block; font-size: 15px; line-height: 1.3; }
+    .brand-note { display: block; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: .10em; }
+    .nav-links { display: flex; align-items: center; gap: 30px; color: #405550; font-size: 13px; font-weight: 650; }
+    .nav-links a:not(.nav-cta):hover { color: var(--green); }
+    .nav-cta, .button {
+      display: inline-flex; justify-content: center; align-items: center; gap: 9px;
+      border-radius: 999px; font-weight: 750; transition: transform .2s, background .2s, box-shadow .2s;
+    }
+    .nav-cta { padding: 10px 17px; color: white; background: var(--green); }
+    .nav-cta:hover, .button-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+    .menu-button { display: none; border: 1px solid var(--line); border-radius: 12px; padding: 8px 11px; color: var(--ink); background: var(--white); }
+    .hero { position: relative; overflow: hidden; padding: 90px 0 76px; }
+    .hero::before {
+      content: ""; position: absolute; width: 620px; height: 620px; border-radius: 50%;
+      top: -330px; right: -150px; background: radial-gradient(circle, rgba(216, 238, 155, .46), rgba(216, 238, 155, 0) 68%);
+      pointer-events: none;
+    }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 58px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--green); font-size: 12px; font-weight: 800; letter-spacing: .16em; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; border-radius: 2px; background: var(--orange); }
+    h1 { max-width: 650px; margin: 18px 0 22px; font-size: clamp(42px, 6vw, 72px); line-height: 1.18; letter-spacing: -.055em; }
+    h1 .accent { color: var(--green); }
+    .hero-copy { max-width: 570px; margin: 0; color: #536662; font-size: 17px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .button { min-height: 50px; padding: 12px 22px; font-size: 14px; }
+    .button-primary { color: white; background: var(--green); box-shadow: 0 9px 24px rgba(29, 97, 83, .18); }
+    .button-quiet { border: 1px solid #cddbd3; background: rgba(255, 254, 250, .72); }
+    .button-quiet:hover { transform: translateY(-2px); box-shadow: 0 9px 24px rgba(21, 54, 47, .08); }
+    .hero-note { display: flex; align-items: center; gap: 11px; margin-top: 32px; color: var(--muted); font-size: 12px; }
+    .note-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 5px rgba(231, 164, 109, .16); }
+    .visual { position: relative; min-height: 450px; display: grid; place-items: center; }
+    .visual-orbit {
+      position: absolute; width: min(390px, 82vw); aspect-ratio: 1; border-radius: 50%;
+      border: 1px solid rgba(29, 97, 83, .14);
+    }
+    .visual-orbit::before, .visual-orbit::after { content: ""; position: absolute; border-radius: 50%; border: 1px solid rgba(29, 97, 83, .11); inset: 32px; }
+    .visual-orbit::after { inset: 68px; }
+    .visual-core {
+      position: relative; z-index: 2; display: grid; place-items: center; width: 166px; height: 166px;
+      border-radius: 48px; transform: rotate(-7deg); color: white;
+      background: linear-gradient(145deg, #287665, #174c43);
+      box-shadow: 0 30px 65px rgba(23, 75, 66, .28);
+    }
+    .visual-core span { transform: rotate(7deg); text-align: center; font-size: 20px; font-weight: 800; line-height: 1.45; }
+    .visual-core small { display: block; color: #cfe4d9; font-size: 10px; font-weight: 650; letter-spacing: .18em; }
+    .float-card {
+      position: absolute; z-index: 3; display: flex; align-items: center; gap: 12px;
+      padding: 15px 17px; border: 1px solid rgba(23, 44, 42, .07); border-radius: 18px;
+      background: rgba(255, 254, 250, .93); box-shadow: var(--shadow);
+    }
+    .float-card strong { display: block; font-size: 13px; line-height: 1.4; }
+    .float-card small { display: block; color: var(--muted); font-size: 10px; }
+    .float-card.ai { top: 52px; right: 0; }
+    .float-card.people { bottom: 67px; left: -3px; }
+    .float-card.result { right: 2px; bottom: 12px; }
+    .icon-box { width: 38px; height: 38px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 12px; color: var(--green); background: var(--mint); font-size: 17px; font-weight: 800; }
+    .icon-box.orange { color: #9b5927; background: #fff0e2; }
+    .icon-box.lime { color: #506529; background: #eff6d9; }
+    .spark { position: absolute; color: var(--orange); font-size: 25px; }
+    .spark.one { top: 84px; left: 64px; }
+    .spark.two { right: 69px; bottom: 105px; font-size: 18px; }
+    .trust-strip { border-block: 1px solid var(--line); background: rgba(255, 254, 250, .64); }
+    .trust-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .trust-label { color: var(--muted); font-size: 12px; font-weight: 700; }
+    .trust-items { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+    .tag { padding: 7px 13px; border: 1px solid #e0e8e2; border-radius: 999px; color: #425751; background: #fffefa; font-size: 11px; font-weight: 650; }
+    section { padding: 100px 0; }
+    .section-head { max-width: 710px; margin-bottom: 42px; }
+    .kicker { color: var(--green); font-size: 11px; font-weight: 850; letter-spacing: .18em; }
+    h2 { margin: 10px 0 14px; font-size: clamp(30px, 4.3vw, 48px); line-height: 1.28; letter-spacing: -.045em; }
+    .section-lead { margin: 0; color: var(--muted); font-size: 15px; }
+    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 76px; align-items: start; }
+    .about-aside { position: sticky; top: 110px; }
+    .portrait-card {
+      position: relative; min-height: 350px; overflow: hidden; display: grid; place-items: center;
+      border-radius: 28px; background: linear-gradient(145deg, #e1eee5, #eef0e4 60%, #f5e7d8);
+    }
+    .portrait-card::before, .portrait-card::after { content: ""; position: absolute; border-radius: 50%; }
+    .portrait-card::before { width: 230px; height: 230px; left: -48px; bottom: -75px; background: rgba(216, 238, 155, .62); }
+    .portrait-card::after { width: 175px; height: 175px; right: -38px; top: -38px; border: 1px solid rgba(29, 97, 83, .20); box-shadow: 0 0 0 24px rgba(29, 97, 83, .04), 0 0 0 48px rgba(29, 97, 83, .03); }
+    .portrait-monogram { position: relative; z-index: 1; display: grid; place-items: center; width: 148px; height: 148px; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; color: var(--green-dark); background: rgba(255,255,255,.42); font-size: 60px; font-weight: 850; letter-spacing: -.1em; box-shadow: 0 14px 50px rgba(29, 97, 83, .10); }
+    .portrait-caption { position: absolute; z-index: 2; left: 24px; bottom: 21px; color: var(--green-dark); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+    .about-copy p { margin: 0 0 18px; color: #536662; font-size: 15px; }
+    .about-copy p:first-child { color: var(--ink); font-size: 18px; font-weight: 650; }
+    .quote {
+      margin-top: 30px; padding: 22px 24px; border-left: 3px solid var(--orange); border-radius: 0 16px 16px 0;
+      color: var(--green-dark); background: #f0f3e9; font-size: 17px; font-weight: 750;
+    }
+    .philosophy { color: white; background: var(--green-dark); }
+    .philosophy .kicker { color: var(--lime); }
+    .philosophy h2 { max-width: 700px; }
+    .philosophy .section-lead { max-width: 650px; color: #c5d8d0; }
+    .collab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 42px; }
+    .collab-card { padding: 30px; border: 1px solid rgba(255,255,255,.15); border-radius: 22px; background: rgba(255,255,255,.06); }
+    .collab-title { display: flex; align-items: center; gap: 13px; margin-bottom: 17px; }
+    .collab-title .icon-box { width: 46px; height: 46px; }
+    .collab-title h3 { margin: 0; font-size: 20px; }
+    .collab-card p { margin: 0 0 17px; color: #c5d8d0; font-size: 13px; }
+    .list { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .list li { display: flex; align-items: flex-start; gap: 10px; color: #e6eee9; font-size: 13px; }
+    .check { color: var(--lime); font-weight: 900; }
+    .services { background: var(--white); }
+    .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .service-card {
+      min-height: 210px; padding: 27px; border: 1px solid #e6ece7; border-radius: 22px;
+      background: #fffefa; transition: transform .2s, box-shadow .2s, border-color .2s;
+    }
+    .service-card:hover { transform: translateY(-4px); border-color: #c9ddd2; box-shadow: 0 18px 44px rgba(21,54,47,.08); }
+    .service-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .service-number { color: #a4b2ac; font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+    .service-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .service-card p { max-width: 470px; margin: 0; color: var(--muted); font-size: 13px; }
+    .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 38px; }
+    .step { position: relative; padding: 26px 24px; border-top: 1px solid #cbd9d1; }
+    .step-num { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 13px; color: var(--green); background: var(--mint); font-size: 12px; font-weight: 850; }
+    .step h3 { margin: 17px 0 8px; font-size: 17px; }
+    .step p { margin: 0; color: var(--muted); font-size: 13px; }
+    .closing { padding: 0 0 100px; }
+    .closing-card {
+      position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 28px;
+      padding: 44px 50px; border-radius: 28px; color: white; background: #1b5147;
+    }
+    .closing-card::after { content: ""; position: absolute; width: 280px; height: 280px; right: 140px; top: -190px; border: 1px solid rgba(255,255,255,.15); border-radius: 50%; box-shadow: 0 0 0 34px rgba(255,255,255,.03), 0 0 0 68px rgba(255,255,255,.025); }
+    .closing-copy { position: relative; z-index: 1; max-width: 650px; }
+    .closing-copy .kicker { color: var(--lime); }
+    .closing-copy h2 { margin: 8px 0; font-size: clamp(25px, 3.5vw, 38px); }
+    .closing-copy p { margin: 0; color: #c9ddd5; font-size: 13px; }
+    .closing-card .button { position: relative; z-index: 1; flex: 0 0 auto; color: var(--green-dark); background: #f7f7f2; }
+    .closing-card .button:hover { transform: translateY(-2px); background: var(--lime); }
+    footer { padding: 27px 0; border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 11px; }
+    .footer-brand { color: var(--ink); font-weight: 800; }
+    .reveal { animation: enter .75s both; }
+    @keyframes enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 20px; }
+      .hero { padding-top: 66px; }
+      .hero-copy { max-width: 680px; }
+      .visual { min-height: 390px; }
+      .about-grid { grid-template-columns: .8fr 1.2fr; gap: 38px; }
+      .portrait-card { min-height: 300px; }
+      .about-aside { top: 95px; }
+      .closing-card { padding: 36px; }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: min(var(--max), calc(100% - 36px)); }
+      .nav { min-height: 68px; }
+      .menu-button { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; }
+      .nav-links {
+        position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: none; align-items: stretch;
+        padding: 14px 18px 18px; border-bottom: 1px solid var(--line); background: var(--paper);
+      }
+      .nav-links.open { display: flex; flex-direction: column; gap: 0; }
+      .nav-links a { padding: 10px 4px; }
+      .nav-links .nav-cta { margin-top: 7px; padding: 10px 16px; text-align: center; }
+      .hero { padding: 52px 0 44px; }
+      h1 { font-size: clamp(39px, 12vw, 58px); }
+      .hero-copy { font-size: 15px; }
+      .visual { min-height: 330px; margin-top: 2px; }
+      .visual-orbit { width: min(300px, 78vw); }
+      .visual-core { width: 132px; height: 132px; border-radius: 39px; }
+      .visual-core span { font-size: 17px; }
+      .float-card { padding: 11px 12px; gap: 8px; }
+      .float-card.ai { top: 26px; right: 0; }
+      .float-card.people { left: 0; bottom: 53px; }
+      .float-card.result { right: -2px; bottom: 2px; }
+      .float-card strong { font-size: 11px; }
+      .float-card small { font-size: 9px; }
+      .icon-box { width: 32px; height: 32px; border-radius: 10px; }
+      .spark.one { top: 36px; left: 26px; }
+      .spark.two { right: 29px; bottom: 74px; }
+      .trust-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 16px; gap: 9px; }
+      .trust-items { justify-content: flex-start; }
+      section { padding: 72px 0; }
+      .about-grid { grid-template-columns: 1fr; gap: 26px; }
+      .about-aside { position: relative; top: auto; }
+      .portrait-card { min-height: 245px; }
+      .portrait-monogram { width: 116px; height: 116px; font-size: 48px; }
+      .collab-grid, .service-grid { grid-template-columns: 1fr; }
+      .collab-card { padding: 23px; }
+      .approach-grid { grid-template-columns: 1fr; gap: 4px; }
+      .step { padding: 20px 4px; }
+      .closing { padding-bottom: 72px; }
+      .closing-card { align-items: flex-start; flex-direction: column; padding: 30px 25px; }
+      .closing-card::after { right: -100px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    /* International professional visual system */
+    :root {
+      --forest: #142d3b; --forest-2: #1c4255; --sage: #748d9a; --mist: #e9eef1;
+      --cream: #f5f6f4; --gold: #7797e4; --ink: #172a33; --muted: #64747a;
+      --white: #fff; --shadow: 0 18px 48px rgba(16, 39, 52, .12); --radius: 5px;
+    }
+    body { font-family: Inter, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; }
+    .topbar { background: rgba(245, 246, 244, .94); }
+    .brand-mark { border-radius: 6px; background: var(--forest); }
+    .nav-links { letter-spacing: .015em; }
+    .nav-cta, .button { border-radius: 4px; }
+    .nav-cta { background: var(--forest); }
+    .hero::before { background: radial-gradient(circle, rgba(119,151,228,.20), rgba(119,151,228,0) 69%); }
+    .eyebrow::before { background: var(--gold); }
+    .button-primary { background: #2457e6; }
+    .button-primary:hover { background: #173db2; }
+    .visual-core { border-radius: 38px; background: linear-gradient(145deg, #2457e6, #142d3b); box-shadow: 0 30px 65px rgba(20,45,59,.24); }
+    .float-card { border-radius: 7px; }
+    .icon-box, .icon-box.lime { color: #2457e6; background: #e9efff; }
+    .icon-box.orange { color: #8a5c31; background: #f3ece3; }
+    .portrait-card { border-radius: 5px; background: linear-gradient(145deg, #e3eaed, #eef0ed 60%, #e5eaf3); }
+    .portrait-card::before { background: rgba(119,151,228,.20); }
+    .portrait-monogram { color: var(--forest); border-radius: 50%; }
+    .quote { border-left-color: var(--gold); border-radius: 0; color: var(--forest); background: #e9eef1; }
+    .philosophy { background: var(--forest); }
+    .services { background: #fff; }
+    .service-card { border-radius: 5px; }
+    .closing-card { border-radius: 5px; background: #2457e6; }
+    .closing-card .button { border-radius: 4px; }
+    .lang-toggle {
+      padding: 8px 12px; border: 1px solid #cbd4d7; border-radius: 4px;
+      color: var(--forest); background: transparent; font: inherit; font-size: 11px;
+      font-weight: 800; letter-spacing: .06em; cursor: pointer;
+    }
+    .lang-toggle:hover { color: #2457e6; border-color: #2457e6; }
+    .nav-links .lang-toggle { margin-left: 2px; }
+    @media (max-width: 650px) {
+      .nav-links .lang-toggle { align-self: flex-start; margin: 9px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="主要導覽">
+      <a class="brand" href="file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#top" aria-label="駱素娥首頁">
+        <span class="brand-mark" aria-hidden="true">娥</span>
+        <span><span class="brand-name">駱素娥</span><span class="brand-note">AI × WORKFLOW</span></span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">☰ <span>選單</span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#about">關於我</a>
+        <a href="file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#approach">人機協作</a>
+        <a href="file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#services">服務內容</a>
+        <a class="nav-cta" href="file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#start">一起找到合適做法 <span aria-hidden="true">↗</span></a>
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">AI 應用・數位工具・流程改善</span>
+          <h1>讓 AI 真正<br><span class="accent">走進工作現場。</span></h1>
+          <p class="hero-copy">從每天遇到的工作問題出發，找到 AI 與數位工具最適合的位置。減少重複作業，讓人把專業留給判斷、溝通與創造。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#services">探索服務內容 <span aria-hidden="true">→</span></a>
+            <a class="button button-quiet" href="file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#about">認識駱素娥</a>
+          </div>
+          <div class="hero-note"><span class="note-dot"></span>學得會、做得到、用得上，讓科技成為日常工作的助力。</div>
+        </div>
+        <div class="visual" aria-label="AI 與人的協作示意圖">
+          <div class="visual-orbit"></div>
+          <span class="spark one" aria-hidden="true">✳</span>
+          <span class="spark two" aria-hidden="true">✦</span>
+          <div class="visual-core"><span><small>HUMAN + AI</small>更好的<br>工作方式</span></div>
+          <div class="float-card ai"><span class="icon-box lime" aria-hidden="true">✦</span><span><strong>AI 協助整理</strong><small>資訊・文件・重複任務</small></span></div>
+          <div class="float-card people"><span class="icon-box orange" aria-hidden="true">◎</span><span><strong>人專注價值</strong><small>判斷・溝通・決策</small></span></div>
+          <div class="float-card result"><span class="icon-box" aria-hidden="true">↗</span><span><strong>流程更順暢</strong><small>從工具走向工作方法</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="wrap trust-inner">
+        <span class="trust-label">從工作情境出發，串起每一步</span>
+        <div class="trust-items" aria-label="專業領域">
+          <span class="tag">AI 教育訓練</span><span class="tag">生成式 AI 應用</span><span class="tag">數位工具導入</span><span class="tag">流程改善</span><span class="tag">人機協作</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <aside class="about-aside">
+          <div class="portrait-card" role="img" aria-label="駱素娥的個人識別圖像">
+            <span class="portrait-monogram" aria-hidden="true">素娥</span>
+            <span class="portrait-caption">讓科技回到工作的需要</span>
+          </div>
+        </aside>
+        <div class="about-copy">
+          <span class="kicker">ABOUT ME</span>
+          <h2>科技的價值，<br>在於解決真實的工作問題。</h2>
+          <p>我是駱素娥，專注於 AI 應用、數位工具、企業教育訓練與工作流程改善。</p>
+          <p>面對快速發展的 AI 與數位工具，企業需要的不只是更多工具，而是從哪裡開始、如何導入，以及如何讓新方法真正融入日常工作。我以實際工作情境為出發點，協助找出資料整理、文件處理、行政作業與資訊彙整中的需求，再一起設計合適的應用方式。</p>
+          <p>我重視工具與人的連結，也重視訓練後能否實際運用。透過清楚易懂的教學與貼近職務的練習，讓不同背景的學習者都能找到適合自己的方法，把學到的內容帶回工作現場。</p>
+          <div class="quote">真正成功的 AI 導入，是找到最適合自己的工作方法。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy" id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">HUMAN + AI</span>
+          <h2>讓 AI 做它擅長的事，<br>讓人專注於人的價值。</h2>
+          <p class="section-lead">人機協作不是把工作交給工具就結束，而是重新安排每一步：由 AI 支援大量與重複的處理，由人掌握脈絡、確認品質並做出判斷。</p>
+        </div>
+        <div class="collab-grid">
+          <article class="collab-card">
+            <div class="collab-title"><span class="icon-box lime" aria-hidden="true">✦</span><h3>AI 協助處理</h3></div>
+            <p>把時間花在更有效率的資訊整理與初步處理。</p>
+            <ul class="list">
+              <li><span class="check">✓</span><span>大量資料與資訊的彙整、分類</span></li>
+              <li><span class="check">✓</span><span>文件草稿、摘要與內容初步整理</span></li>
+              <li><span class="check">✓</span><span>重複性高、步驟明確的工作支援</span></li>
+            </ul>
+          </article>
+          <article class="collab-card">
+            <div class="collab-title"><span class="icon-box orange" aria-hidden="true">◎</span><h3>人保留核心價值</h3></div>
+            <p>讓專業人員把心力留給需要理解與負責的環節。</p>
+            <ul class="list">
+              <li><span class="check">✓</span><span>確認內容、品質與資訊脈絡</span></li>
+              <li><span class="check">✓</span><span>溝通協調、同理需求與建立信任</span></li>
+              <li><span class="check">✓</span><span>運用專業做判斷、創意與決策</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">WHAT I DO</span>
+          <h2>從學會工具，到改變工作方式。</h2>
+          <p class="section-lead">依照團隊的工作情境與需求，將 AI 與數位工具轉化為容易理解、容易操作，也能實際採用的解決方案。</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-top"><span class="icon-box" aria-hidden="true">01</span><span class="service-number">LEARN</span></div>
+            <h3>企業 AI 教育訓練</h3>
+            <p>以職務情境與實作練習為核心，協助團隊建立 AI 基礎觀念，找到適合日常工作的使用方式。</p>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="icon-box orange" aria-hidden="true">02</span><span class="service-number">APPLY</span></div>
+            <h3>生成式 AI 實務應用</h3>
+            <p>從內容生成、文件整理到資訊彙整，練習如何清楚下達任務、檢視結果並有效運用 AI。</p>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="icon-box lime" aria-hidden="true">03</span><span class="service-number">IMPROVE</span></div>
+            <h3>數位工具與流程改善</h3>
+            <p>梳理現有工作流程，找出適合數位化與簡化的環節，減少重複輸入與人工整理負擔。</p>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="icon-box" aria-hidden="true">04</span><span class="service-number">COLLABORATE</span></div>
+            <h3>人機協作方式設計</h3>
+            <p>釐清 AI 與人員各自適合承擔的工作，建立包含檢查、修正與交接的實用協作流程。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">A PRACTICAL APPROACH</span>
+          <h2>從一個工作痛點，開始找到改變。</h2>
+          <p class="section-lead">不必一次改變所有流程。先看見問題，再用適合的工具與練習，一步步讓新的工作方法落地。</p>
+        </div>
+        <div class="approach-grid">
+          <article class="step"><span class="step-num">01</span><h3>理解工作現場</h3><p>從日常任務與實際困難出發，辨識重複、耗時或資訊交接不順的環節。</p></article>
+          <article class="step"><span class="step-num">02</span><h3>設計合適做法</h3><p>選擇適合的 AI 或數位工具，安排人與工具的分工，讓流程清楚又可執行。</p></article>
+          <article class="step"><span class="step-num">03</span><h3>練習並持續調整</h3><p>透過實作熟悉新方法，依照使用經驗調整，讓工具真正融入工作日常。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="start">
+      <div class="wrap">
+        <div class="closing-card">
+          <div class="closing-copy">
+            <span class="kicker">START WITH A REAL NEED</span>
+            <h2>讓 AI 成為工作的實力，<br>從適合你的方法開始。</h2>
+            <p>找出工作中的真實需求，讓科技協助團隊更有效率，也讓每個人發揮專業。</p>
+          </div>
+          <a class="button" href="file:///C:/Users/losuo/OneDrive/%E6%A1%8C%E9%9D%A2/1151006/codex.html#services">看看服務內容 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span class="footer-brand">駱素娥 <span style="font-weight:500;color:#61716d">｜AI 應用・數位工具・流程改善</span></span>
+      <span>© 2026 駱素娥．讓科技成為值得信賴的工作夥伴。</span>
+    </div>
+  </footer>
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const navLinks = document.querySelector(".nav-links");
+    const langToggle = document.getElementById("lang-toggle");
+    const translations = {
+      zh: {
+        ".brand-name": ["駱素娥"], ".brand-note": ["AI × WORKFLOW"],
+        ".nav-links a[href='#about']": ["關於我"], ".nav-links a[href='#approach']": ["人機協作"],
+        ".nav-links a[href='#services']": ["服務內容"], ".nav-links .nav-cta": ["一起找到合適做法 <span aria-hidden='true'>↗</span>"],
+        ".menu-button span": ["選單"], ".eyebrow": ["AI 應用・數位工具・流程改善"],
+        ".hero h1": ["讓 AI 真正<br><span class='accent'>走進工作現場。</span>"],
+        ".hero-copy": ["從實際工作需求出發，找到 AI 與數位工具最適合的位置。減少重複作業，讓人把專業留給判斷、溝通與創造。"],
+        ".hero-actions .btn-primary": ["探索服務內容 <span aria-hidden='true'>→</span>"],
+        ".hero-actions .btn-quiet": ["認識駱素娥"], ".hero-note": ["<span class='note-dot'></span>學得會、做得到、用得上，讓科技成為日常工作的助力。"],
+        ".float-card strong": ["AI 協助整理", "人專注價值", "流程更順暢"],
+        ".float-card small": ["資訊・文件・重複任務", "判斷・溝通・決策", "從工具走向工作方法"],
+        ".trust-label": ["從工作情境出發，串起每一步"],
+        ".trust-items .tag": ["AI 教育訓練", "生成式 AI 應用", "數位工具導入", "流程改善", "人機協作"],
+        "#about .kicker": ["ABOUT ME"], "#about h2": ["科技的價值，<br>在於解決真實的工作問題。"],
+        ".about-copy p": [
+          "我是駱素娥，專注於 AI 應用、數位工具、企業教育訓練與工作流程改善。",
+          "面對快速發展的 AI 與數位工具，企業需要的不只是更多工具，而是從哪裡開始、如何導入，以及如何讓新方法融入日常工作。我以實際工作情境為出發點，協助找出資料整理、文件處理、行政作業與資訊彙整中的需求，再一起設計合適的應用方式。",
+          "我的工作不只著重工具操作，也重視人與 AI 如何分工，以及訓練後能否實際運用。透過清楚易懂的教學與貼近職務的練習，讓不同背景的學習者都能把學到的方法帶回工作現場。"
+        ],
+        ".quote": ["真正成功的 AI 導入，是找到最適合自己的工作方法。"],
+        ".philosophy .kicker": ["HUMAN + AI"], ".philosophy h2": ["讓 AI 做它擅長的事，<br>讓人專注於人的價值。"],
+        ".philosophy .section-lead": ["人機協作不是把工作交給工具就結束，而是重新安排每一步：由 AI 支援大量與重複的處理，由人掌握脈絡、確認品質並做出判斷。"],
+        ".collab-title h3": ["AI 協助處理", "人保留核心價值"],
+        ".collab-card p": ["把時間花在更有效率的資訊整理與初步處理。", "讓專業人員把心力留給需要理解與負責的環節。"],
+        ".list li": ["大量資料與資訊的彙整、分類", "文件草稿、摘要與內容初步整理", "重複性高、步驟明確的工作支援", "確認內容、品質與資訊脈絡", "溝通協調、同理需求與建立信任", "運用專業做判斷、創意與決策"],
+        ".services .kicker": ["WHAT I DO"], ".services h2": ["從學會工具，到改變工作方式。"],
+        ".services .section-lead": ["依照團隊的工作情境與需求，將 AI 與數位工具轉化為容易理解、容易操作，也能實際採用的解決方案。"],
+        ".service-card h3": ["企業 AI 教育訓練", "生成式 AI 實務應用", "數位工具與流程改善", "人機協作方式設計"],
+        ".service-card p": [
+          "以職務情境與實作練習為核心，協助團隊建立 AI 基礎觀念，找到適合日常工作的使用方式。",
+          "從內容生成、文件整理到資訊彙整，練習如何清楚下達任務、檢視結果並有效運用 AI。",
+          "梳理現有工作流程，找出適合數位化與簡化的環節，減少重複輸入與人工整理負擔。",
+          "釐清 AI 與人員各自適合承擔的工作，建立包含檢查、修正與交接的實用協作流程。"
+        ],
+        "#method .kicker": ["A PRACTICAL APPROACH"], "#method h2": ["從一個工作痛點，開始找到改變。"],
+        "#method .section-lead": ["不必一次改變所有流程。先看見問題，再用適合的工具與練習，一步步讓新的工作方法落地。"],
+        ".step h3": ["理解工作現場", "設計合適做法", "練習並持續調整"],
+        ".step p": ["從日常任務與實際困難出發，辨識重複、耗時或資訊交接不順的環節。", "選擇適合的 AI 或數位工具，安排人與工具的分工，讓流程清楚又可執行。", "透過實作熟悉新方法，依照使用經驗調整，讓工具真正融入工作日常。"],
+        ".closing-copy .kicker": ["START WITH A REAL NEED"],
+        ".closing-copy h2": ["讓 AI 成為工作的實力，<br>從適合你的方法開始。"],
+        ".closing-copy p": ["找出工作中的真實需求，讓科技協助團隊更有效率，也讓每個人發揮專業。"],
+        ".closing-card .button": ["看看服務內容 <span aria-hidden='true'>↗</span>"],
+        ".footer-brand": ["駱素娥 <span style='font-weight:500;color:#61716d'>｜AI 應用・數位工具・流程改善</span>"],
+        ".footer-inner > span:last-child": ["© 2026 駱素娥．讓科技成為值得信賴的工作夥伴。"]
+      },
+      en: {
+        ".brand-name": ["Su-E Luo"], ".brand-note": ["AI · DIGITAL TOOLS · WORKFLOW"],
+        ".nav-links a[href='#about']": ["About"], ".nav-links a[href='#approach']": ["Approach"],
+        ".nav-links a[href='#services']": ["Services"], ".nav-links .nav-cta": ["Explore collaboration <span aria-hidden='true'>↗</span>"],
+        ".menu-button span": ["Menu"], ".eyebrow": ["AI APPLICATION · DIGITAL TOOLS · WORKFLOW"],
+        ".hero h1": ["Better ways<br><span class='accent'>of working with AI.</span>"],
+        ".hero-copy": ["Starting with real work needs, I bring AI and digital tools into everyday workflows—reducing repetitive tasks so people can focus on judgment, communication and creativity."],
+        ".hero-actions .btn-primary": ["Explore services <span aria-hidden='true'>→</span>"],
+        ".hero-actions .btn-quiet": ["About Su-E"], ".hero-note": ["<span class='note-dot'></span>Practical methods that people can learn, use and bring to work."],
+        ".float-card strong": ["AI organizes information", "People focus on value", "Workflows work better"],
+        ".float-card small": ["Information · documents · routine tasks", "Judgment · communication · decisions", "From tools to better ways of working"],
+        ".trust-label": ["A practical path from work context to better outcomes"],
+        ".trust-items .tag": ["AI Training", "Generative AI", "Digital Tools", "Workflow Improvement", "Human–AI Collaboration"],
+        "#about .kicker": ["ABOUT ME"], "#about h2": ["Technology should solve<br>real work challenges."],
+        ".about-copy p": [
+          "I’m Su-E Luo, focused on AI applications, digital tools, corporate training and workflow improvement.",
+          "As AI and digital tools evolve, organizations need more than new technology. They need to know where to begin, how to introduce it and how to make it useful in everyday work. I start with real workflows—including information management, document handling and administrative tasks—to identify practical opportunities for AI and digital tools.",
+          "My work goes beyond tool training. I help people find an effective division of work between humans and AI, with clear, role-based practice that learners can bring back to the workplace."
+        ],
+        ".quote": ["Successful AI adoption starts with a better way of working."],
+        ".philosophy .kicker": ["HUMAN + AI"], ".philosophy h2": ["Let AI do what it does well.<br>Keep human expertise at the center."],
+        ".philosophy .section-lead": ["Human–AI collaboration means rethinking each step of a workflow: AI supports high-volume, repetitive work, while people provide context, review quality and make decisions."],
+        ".collab-title h3": ["AI handles information work", "People bring human expertise"],
+        ".collab-card p": ["Use AI to speed up information processing and routine preparation.", "Keep people focused on the work that calls for understanding and accountability."],
+        ".list li": ["Organizing and classifying information", "Drafting, summarizing and preparing content", "Supporting clear, repeatable tasks", "Reviewing content, quality and context", "Communicating, coordinating and building trust", "Applying expertise, creativity and judgment"],
+        ".services .kicker": ["WHAT I DO"], ".services h2": ["Move from using tools<br>to improving how work gets done."],
+        ".services .section-lead": ["Practical AI and digital solutions shaped around your team's work—clear to understand, easy to use and ready for the workplace."],
+        ".service-card h3": ["Corporate AI Training", "Generative AI in Practice", "Digital Tools & Workflow Improvement", "Human–AI Collaboration Design"],
+        ".service-card p": [
+          "Role-based learning and hands-on practice that build AI literacy and practical workplace skills.",
+          "Practice using generative AI for content creation, document work and information synthesis.",
+          "Map current workflows and identify opportunities to simplify, digitize and reduce repetitive effort.",
+          "Clarify responsibilities and create practical workflows for review, refinement and handoffs."
+        ],
+        "#method .kicker": ["A PRACTICAL APPROACH"], "#method h2": ["Start with a real work challenge.<br>Build change step by step."],
+        "#method .section-lead": ["You do not have to change every process at once. Identify a real need, choose a fitting approach and make it part of daily work through practice."],
+        ".step h3": ["Understand the work", "Design a practical approach", "Practice and refine"],
+        ".step p": ["Look at everyday tasks to find repetitive, time-consuming work and friction in information handoffs.", "Choose the right tools and define a clear, workable division of tasks between people and AI.", "Build confidence through practice and adapt the approach to fit day-to-day work."],
+        ".closing-copy .kicker": ["START WITH A REAL NEED"],
+        ".closing-copy h2": ["Find a better way to work<br>with AI."],
+        ".closing-copy p": ["Start with real needs. Help teams work more effectively and give people more room to apply their expertise."],
+        ".closing-card .button": ["Explore services <span aria-hidden='true'>↗</span>"],
+        ".footer-brand": ["Su-E Luo <span style='font-weight:500;color:#61716d'>｜AI Applications · Digital Tools · Workflow Improvement</span>"],
+        ".footer-inner > span:last-child": ["© 2026 Su-E Luo · Technology that works for people."]
+      }
+    };
+    function setLanguage(language) {
+      Object.entries(translations[language]).forEach(([selector, values]) => {
+        document.querySelectorAll(selector).forEach((element, index) => {
+          if (values[index] !== undefined) element.innerHTML = values[index];
+        });
+      });
+      document.documentElement.lang = language === "en" ? "en" : "zh-Hant";
+      document.title = language === "en" ? "Su-E Luo | AI Applications & Workflow Improvement" : "駱素娥｜讓 AI 真正走進工作現場";
+      document.querySelector('meta[name="description"]').content = language === "en"
+        ? "Su-E Luo helps organizations apply AI through practical training, digital tools and workflow improvement."
+        : "駱素娥專注於 AI 應用、數位工具、企業教育訓練與工作流程改善，協助企業讓 AI 真正走進工作現場。";
+      langToggle.textContent = language === "zh" ? "EN" : "繁中";
+      langToggle.setAttribute("aria-label", language === "zh" ? "Switch to English" : "切換為繁體中文");
+      document.querySelector(".brand").setAttribute("aria-label", language === "zh" ? "駱素娥首頁" : "Su-E Luo home");
+    }
+    let currentLanguage = "zh";
+    langToggle.addEventListener("click", () => {
+      currentLanguage = currentLanguage === "zh" ? "en" : "zh";
+      setLanguage(currentLanguage);
+    });
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+
+
+</body></html>
